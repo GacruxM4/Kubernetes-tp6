@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-color
+  labels:
+    app: webapp-color
+    env: prod
+    formation: Frazer
+spec:
+  containers:
+    - image: kodekloud/webapp-color
+      name: webappcolor
+      ports:
+        - containerPort: 8080
+      env:
+        - name: APP_COLOR
+          value: red
